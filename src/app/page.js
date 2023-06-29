@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Provider } from "@self.id/react";
 
 export default function Home() {
   return (
