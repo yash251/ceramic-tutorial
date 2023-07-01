@@ -1,7 +1,7 @@
 function MyApp({ Component, pageProps }) {
     return (
       <Provider client={{ ceramic: "testnet-clay" }}>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Provider>
     );
   }
