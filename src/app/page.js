@@ -5,6 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 
 export default function Home() {
+  const web3ModalRef = useRef();
+
+  const getProvider = async () => {
+    const provider = await web3ModalRef.current.connect();
+    const wrappedProvider = new Web3Provider(provider);
+    return wrappedProvider;
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
