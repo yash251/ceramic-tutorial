@@ -3,6 +3,7 @@ import { Provider } from "@self.id/react";
 import { Web3Provider } from "@ethersproject/providers";
 import { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
+import { useViewerConnection } from "@self.id/react";
 
 export default function Home() {
   const web3ModalRef = useRef();
