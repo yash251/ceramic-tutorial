@@ -8,6 +8,8 @@ import { useViewerConnection } from "@self.id/react";
 export default function Home() {
   const web3ModalRef = useRef();
 
+  const [connection, connect, disconnect] = useViewerConnection();
+
   const getProvider = async () => {
     const provider = await web3ModalRef.current.connect();
     const wrappedProvider = new Web3Provider(provider);
