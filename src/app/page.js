@@ -10,6 +10,16 @@ export default function Home() {
 
   const [connection, connect, disconnect] = useViewerConnection();
 
+  useEffect(() => {
+    if (connection.status !== "connected") {
+      web3ModalRef.current = new Web3Modal({
+        network: "goerli",
+        providerOptions: {},
+        disableInjectedProvider: false,
+      });
+    }
+  }, [connection.status]);
+
   const getProvider = async () => {
     const provider = await web3ModalRef.current.connect();
     const wrappedProvider = new Web3Provider(provider);
