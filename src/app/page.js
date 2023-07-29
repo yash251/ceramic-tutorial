@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Provider } from "@self.id/react";
 import { Web3Provider } from "@ethersproject/providers";
 import { useEffect, useRef, useState } from "react";
